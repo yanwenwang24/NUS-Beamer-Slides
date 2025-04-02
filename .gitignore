@@ -1,0 +1,33 @@
+# System
+.DS_Store
+.vscode/
+
+# LaTeX
+/template/*.aux
+/template/*.bbl
+/template/*.blg
+/template/*.brf
+/template/*.idx
+/template/*.ilg
+/template/*.ind
+/template/*.lof
+/template/*.log
+/template/*.lot
+/template/*.out
+/template/*.toc
+/template/*.acn
+/template/*.acr
+/template/*.alg
+/template/*.glg
+/template/*.glo
+/template/*.gls
+/template/*.ist
+/template/*.fls
+/template/*.fdb_latexmk
+/template/*.synctex.gz
+/template/*.nav
+/template/*.snm
+/template/*.vrb
+/template/*.xdv
+/template/*.bcf
+/template/*.run.xml

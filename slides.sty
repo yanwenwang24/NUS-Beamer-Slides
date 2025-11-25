@@ -1,0 +1,83 @@
+% slides.sty --- Style file for NUS course presentations
+\ProvidesPackage{slides}[2025/11/25 NUS Slides Style]
+
+% ------------------------------------------------------------
+% Required packages
+% ------------------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{hyperref}
+\RequirePackage{natbib}
+\RequirePackage[sfdefault]{roboto} % Font
+
+% ------------------------------------------------------------
+% Beamer theme
+% ------------------------------------------------------------
+\mode<presentation>{
+	\usetheme{Madrid}
+	\usefonttheme{professionalfonts}
+	\setbeamercovered{transparent}
+}
+
+% ------------------------------------------------------------
+% Color configuration
+% ------------------------------------------------------------
+\definecolor{nus-blue}{HTML}{385988}
+\definecolor{nus-orange}{HTML}{e07a3f}
+\definecolor{grey}{HTML}{b8b8b8}
+
+\setbeamercolor{palette primary}{bg=nus-orange, fg=white}
+\setbeamercolor{palette secondary}{bg=nus-blue, fg=white}
+\setbeamercolor{palette tertiary}{bg=nus-blue, fg=white}
+\setbeamercolor{palette quaternary}{bg=nus-blue, fg=white} % Section head (left)
+
+\setbeamercolor{structure}{fg=nus-blue} % Itemize, enumerate, etc.
+
+\setbeamercolor{subsection in head/foot}{bg=nus-blue, fg=white}
+
+\setbeamertemplate{caption}[numbered]
+
+% ------------------------------------------------------------
+% Logo
+% ------------------------------------------------------------
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+\addtobeamertemplate{frametitle}{}{%
+	\begin{textblock*}{\TPHorizModule}(0.76\TPHorizModule,-0.001\TPVertModule)
+		\includegraphics[height=0.9cm]{assets/logo.jpg}%
+	\end{textblock*}%
+}
+
+% ------------------------------------------------------------
+% Metadata commands
+% ------------------------------------------------------------
+% Setters
+\newcommand{\coursecode}[1]{\def\@coursecode{#1}}
+\newcommand{\coursename}[1]{\def\@coursename{#1}}
+\newcommand{\semester}[1]{\def\@semester{#1}}
+\newcommand{\instructor}[1]{\def\@instructor{#1}}
+\newcommand{\instructoremail}[1]{\def\@instructoremail{#1}}
+\newcommand{\institution}[1]{\def\@institution{#1}}
+
+% Default values
+\coursecode{COURSE XXX}
+\coursename{Course Name}
+\semester{Fall 2026}
+\instructor{Instructor Name}
+\instructoremail{\href{mailto:instructor@u.nus.edu}{instructor@u.nus.edu}}
+\institution{National University of Singapore}
+
+% Getters
+\newcommand{\thecoursecode}{\@coursecode}
+\newcommand{\thecoursename}{\@coursename}
+\newcommand{\thesemester}{\@semester}
+\newcommand{\theinstructor}{\@instructor}
+\newcommand{\theinstructoremail}{\@instructoremail}
+\newcommand{\theinstitution}{\@institution}
+
+\endinput

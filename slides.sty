@@ -22,10 +22,10 @@
 % Beamer theme
 % ------------------------------------------------------------
 \mode<presentation>{
-	\usetheme{Madrid}
-	\usefonttheme{professionalfonts}
-	\setbeamercovered{transparent}
-}
+		\usetheme{Madrid}
+		\usefonttheme{professionalfonts}
+		\setbeamercovered{transparent}
+	}
 
 % ------------------------------------------------------------
 % Color configuration
@@ -33,6 +33,7 @@
 \definecolor{nus-blue}{HTML}{385988}
 \definecolor{nus-orange}{HTML}{e07a3f}
 \definecolor{grey}{HTML}{b8b8b8}
+\definecolor{cite-grey}{HTML}{888888}
 
 \setbeamercolor{palette primary}{bg=nus-orange, fg=white}
 \setbeamercolor{palette secondary}{bg=nus-blue, fg=white}
@@ -62,6 +63,7 @@
 % ------------------------------------------------------------
 \usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
 \addbibresource{library.bib}
+\renewcommand*{\citesetup}{\footnotesize\color{cite-grey}}
 
 % ------------------------------------------------------------
 % Metadata commands
